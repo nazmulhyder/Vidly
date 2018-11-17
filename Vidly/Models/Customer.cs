@@ -12,10 +12,12 @@ namespace Vidly.Models
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
+        [Display(Name = "Date Of Birth")]
         public DateTime? BirthDate { get; set; }
         public bool IsSubscribeToNewsLatter { get; set; }
         //this is lazy loading Called "virtual"
         public MembershipType MembershipType { get; set; }
+        [Display(Name = "Membership Type")]
         public byte MembershipTypeId { get; set; }
     }
 }
