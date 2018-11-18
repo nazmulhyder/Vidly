@@ -5,6 +5,11 @@
 }
 
 <h2>Movies</h2>
+<div>
+     <a href="/Movies/New">
+        <button class="btn btn-primary" name="movie_add_btn" style="margin-bottom: 15px">add movie</button>
+    </a>
+</div>
 <table class="table table-hover table-striped table-bordered">
     <thead>
         <tr>
@@ -27,7 +32,7 @@
             foreach (var movies in Model)
             {
             <tr>
-                <td>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
+                <td>@Html.ActionLink(movies.Name, "Edit", "Movies", new { id = movies.Id }, null)</td>
                 <td>@movies.Genre.Name</td>
             </tr>
                 
